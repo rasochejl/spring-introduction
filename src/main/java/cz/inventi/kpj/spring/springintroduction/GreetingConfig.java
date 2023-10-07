@@ -8,9 +8,11 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 
+
 @Configuration
 @EnableConfigurationProperties(GreetingConfigurationProperties.class)
 public class GreetingConfig {
+
     @Bean(name = "greetingConstantRepositoryImpl")
     @Scope(scopeName = "prototype")
     public GreetingRepository greetingConstantRepositoryImpl() {
