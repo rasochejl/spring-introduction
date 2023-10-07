@@ -3,6 +3,7 @@ package cz.inventi.kpj.spring.springintroduction;
 import cz.inventi.kpj.spring.springintroduction.service.GreetingService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
 
 @SpringBootApplication
