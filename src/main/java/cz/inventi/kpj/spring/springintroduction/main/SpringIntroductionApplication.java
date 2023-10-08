@@ -1,11 +1,14 @@
-package cz.inventi.kpj.spring.springintroduction;
+package cz.inventi.kpj.spring.springintroduction.main;
 
 import cz.inventi.kpj.spring.springintroduction.service.GreetingService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
+@ComponentScan(basePackages = "cz.inventi.kpj.spring.springintroduction")
+
+
 public class SpringIntroductionApplication {
 
 	public static void main(String[] args) {
