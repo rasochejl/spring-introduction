@@ -8,7 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @ComponentScan(basePackages = "cz.inventi.kpj.spring.springintroduction")
-// wouldn't work without the previous line, because the AppController is in a different package
+// wouldn't work without the previous line, because the springbootapp is in a different package
 public class SpringIntroductionApplication {
 
 	public static void main(String[] args) {
