@@ -1,5 +1,8 @@
 package cz.inventi.kpj.spring.springintroduction.service;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public interface GreetingService {
     /**
      * Load text from the file.
