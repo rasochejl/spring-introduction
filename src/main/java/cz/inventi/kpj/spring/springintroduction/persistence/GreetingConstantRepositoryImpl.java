@@ -1,8 +1,14 @@
 package cz.inventi.kpj.spring.springintroduction.persistence;
 
-public class GreetingRepositoryImpl implements GreetingRepository {
+import org.springframework.stereotype.Component;
+
+@Component("greetingConstantRepository")
+public class GreetingConstantRepositoryImpl implements GreetingRepository {
+
+    //com
 
     @Override
     public String getGreetingText() {
-        "Hello from Mongo"    }
+        return "Hello from Mongo";
+    }
 }

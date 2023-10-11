@@ -1,4 +1,4 @@
-package cz.inventi.kpj.spring.springintroduction;
+package cz.inventi.kpj.spring.springintroduction.persistence;
 
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;

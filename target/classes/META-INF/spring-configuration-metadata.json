@@ -1,0 +1,17 @@
+{
+  "groups": [
+    {
+      "name": "spring-introduction.greeting",
+      "type": "cz.inventi.kpj.spring.springintroduction.persistence.ConfigurationProperties",
+      "sourceType": "cz.inventi.kpj.spring.springintroduction.persistence.ConfigurationProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "spring-introduction.greeting.text",
+      "type": "java.lang.String",
+      "sourceType": "cz.inventi.kpj.spring.springintroduction.persistence.ConfigurationProperties"
+    }
+  ],
+  "hints": []
+}
