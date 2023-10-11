@@ -3,31 +3,24 @@ package cz.inventi.kpj.spring.springintroduction.service;
 import cz.inventi.kpj.spring.springintroduction.persistence.GreetingConstantRepositoryImpl;
 import cz.inventi.kpj.spring.springintroduction.persistence.GreetingFileRepositoryImpl;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
 
-@Configuration
+@Component
 public class GreetingServiceImpl implements GreetingService{
 
-    @Bean
-    public String getConstant() {
-        GreetingConstantRepositoryImpl greetingConstantRepository = new GreetingConstantRepositoryImpl();
-        return greetingConstantRepository.getGreetingText();
-    }
+    @Autowired
+    GreetingConstantRepositoryImpl greetingConstantRepository;
 
-    @Bean
-    public String getFile() {
-        GreetingFileRepositoryImpl fileRepository = new GreetingFileRepositoryImpl();
-        return fileRepository.getGreetingText();
-    }
+    @Autowired
+    GreetingFileRepositoryImpl greetingFileRepository;
 
     @Override
     public String getFileText() {
-        return getFile();
+        return greetingFileRepository.getGreetingText();
     }
 
     @Override
     public String getConstantText() {
-        return getConstant();
+        return greetingConstantRepository.getGreetingText();
     }
 }
