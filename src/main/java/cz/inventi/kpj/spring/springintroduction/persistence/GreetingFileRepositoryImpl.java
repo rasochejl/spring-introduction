@@ -1,18 +1,14 @@
 package cz.inventi.kpj.spring.springintroduction.persistence;
 
-import lombok.Data;
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import cz.inventi.kpj.spring.springintroduction.config.GreetingConfigProperties;
+import org.springframework.beans.factory.annotation.Autowired;
 
-@Data
-@EnableConfigurationProperties
-@ConfigurationProperties(prefix = "spring-introduction.greeting")
 public class GreetingFileRepositoryImpl implements GreetingRepository{
-
-    private String text;
+    @Autowired
+    GreetingConfigProperties greetingConfigProperties;
 
     @Override
     public String getGreetingText() {
-        return text;
+        return greetingConfigProperties.getText();
     }
 }
